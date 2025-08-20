@@ -1,0 +1,41 @@
+{
+  "compilerOptions": {
+    "target": "es2022",
+    "lib": ["es2022", "dom"],
+    "module": "ESNext",
+    "moduleResolution": "Bundler",
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "outDir": "./dist",
+    "rootDir": "./",
+    "baseUrl": "./",
+    "jsx": "react-jsx",
+    "paths": {
+      // Backend Paths (relativos a baseUrl, que é a raiz do projeto)
+      "@config/*": ["src/config/*"],
+      "@controllers/*": ["src/controllers/*"],
+      "@models/*": ["src/models/*"],
+      "@routes/*": ["src/routes/*"],
+      "@services/*": ["src/services/*"],
+      "@utils/*": ["src/utils/*"],
+      "@middlewares/*": ["src/middlewares/*"],
+      "@sockets/*": ["src/sockets/*"],
+      "@scripts/*": ["src/scripts/*"],
+      "@shared/*": ["shared/*"],
+
+      // Frontend Paths (relativos a baseUrl, que é a raiz do projeto)
+      "@/components/*": ["client/src/components/*"],
+      "@/contexts/*": ["client/src/contexts/*"],
+      "@/hooks/*": ["client/src/hooks/*"],
+      "@/lib/*": ["client/src/lib/*"],
+      "@/pages/*": ["client/src/pages/*"],
+      "@/services/*": ["client/src/services/*"],
+      "@/utils/*": ["client/src/utils/*"],
+      "@/assets/*": ["client/src/assets/*"]
+    }
+  },
+  "include": ["src/**/*.ts", "shared/**/*.ts", "client/**/*.ts", "client/**/*.tsx"],
+  "exclude": ["node_modules", "dist"]
+}
